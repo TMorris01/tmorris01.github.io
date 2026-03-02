@@ -98,7 +98,7 @@
   <a class="link-btn highlight" href="https://tmorris01.github.io/gnlinks/" target="_self">
     Gn-Links
   </a>
-  <a class="link-btn highlight" href="https://tmorris01.github.io/recruiting-hub/" target="_self">
+  <a class="link-btn highlight" onclick="enterCode()">
     🏈 Recruit Hub
   </a>
   <a class="link-btn highlight" href="https://github.com/TMorris01/Blooket-Cheat" target="_self">
@@ -113,4 +113,25 @@
 
 </div>
 </body>
+<script>
+function enterCode() {
+  // 1. Show the popup and save what the user types
+  let userCode = prompt("Please enter the code:");
+
+  // 2. The code you want to check for
+  const secretCode = "1010"; 
+
+  // 3. Check if the code matches
+  if (userCode === secretCode) {
+    // Redirect if correct
+    window.location.href = "https://tmorris01.github.io/recruiting-hub/"; 
+  } else if (userCode === null) {
+    // Do nothing if they click "Cancel"
+    return;
+  } else {
+    // Show an error if wrong
+    alert("Incorrect code! Access denied.");
+  }
+}
+</script>
 </html>
